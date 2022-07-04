@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #3F3351;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.sky {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1F1D36;
+  z-index: 100;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.sky .planets .star {
+  position: absolute;
+  opacity: 0.5;
+  color: #fff;
+  text-shadow: 0px 0px 50px #fff;
+}
+
+.sky .planets .star-one {
+  font-size: 5rem;
+  top: 10%;
+  left: 30%;
+  -webkit-animation: spin-right 40s linear infinite;
+          animation: spin-right 40s linear infinite;
+}
+
+.sky .planets .star-two {
+  font-size: 4rem;
+  top: 40%;
+  right: 30%;
+  -webkit-animation: spin-left 30s linear infinite;
+          animation: spin-left 30s linear infinite;
+}
+
+.sky .planets .star-three {
+  font-size: 4.5rem;
+  top: 70%;
+  right: 67%;
+  -webkit-animation: spin-left 35s linear infinite;
+          animation: spin-left 35s linear infinite;
+}
+
+.sky .planets .star-four {
+  font-size: 7rem;
+  bottom: 15%;
+  right: 35%;
+  -webkit-animation: spin-left 45s linear infinite;
+          animation: spin-left 45s linear infinite;
+}
+
+.sky .planets .star-five {
+  font-size: 6.5rem;
+  bottom: 12%;
+  right: 5%;
+  -webkit-animation: spin-right 40s linear infinite;
+          animation: spin-right 40s linear infinite;
+}
+
+.sky .planets .star-six {
+  font-size: 4.7rem;
+  bottom: 12%;
+  left: 5%;
+  -webkit-animation: spin-left 30s linear infinite;
+          animation: spin-left 30s linear infinite;
+}
+
+.sky .planets .star-seven {
+  font-size: 5rem;
+  top: 25%;
+  left: 8%;
+  -webkit-animation: spin-right 40s linear infinite;
+          animation: spin-right 40s linear infinite;
+}
+
+.sky .planets .star-eight {
+  font-size: 5.5rem;
+  top: 25%;
+  left: 55%;
+  -webkit-animation: spin-left 50s linear infinite;
+          animation: spin-left 50s linear infinite;
+}
+
+.sky .planets .moon {
+  font-size: 20rem;
+  top: 5%;
+  right: 5%;
+  -webkit-animation: pulse 20s infinite linear;
+          animation: pulse 20s infinite linear;
+}
+
+@-webkit-keyframes spin-right {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-left {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-left {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3F3351;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 5px #E9A6A6;
+          box-shadow: 0px 0px 5px #E9A6A6;
+  background-color: #E9A6A6;
+  border: 1px solid transparent;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  overflow: hidden;
+  z-index: 101;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: -30px;
+  left: -270px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  background-image: linear-gradient(-250deg, #e9a6a6, white);
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+}
+
+.btn:hover::before {
+  left: 270px;
+}
+
+.sky-animation {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+/*# sourceMappingURL=main.css.map */

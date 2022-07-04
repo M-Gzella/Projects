@@ -1,0 +1,200 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $dark;
+	color: $white;
+	font-family: 'Open Sans', sans-serif;
+	// font-family: 'Oswald', sans-serif;
+}
+
+.sky {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: $darker;
+	z-index: 100;
+    transform: translateY(-120%);
+    transition: transform 2s;
+
+	.planets {
+		.star {
+			position: absolute;
+			opacity: 0.5;
+			color: $white;
+			text-shadow: 0px 0px 50px $white;
+		}
+
+		.star-one {
+			font-size: 5rem;
+			top: 10%;
+			left: 30%;
+			animation: spin-right 40s linear infinite;
+		}
+		.star-two {
+			font-size: 4rem;
+			top: 40%;
+			right: 30%;
+			animation: spin-left 30s linear infinite;
+		}
+
+		.star-three {
+			font-size: 4.5rem;
+			top: 70%;
+			right: 67%;
+			animation: spin-left 35s linear infinite;
+		}
+
+		.star-four {
+			font-size: 7rem;
+			bottom: 15%;
+			right: 35%;
+			animation: spin-left 45s linear infinite;
+		}
+
+		.star-five {
+			font-size: 6.5rem;
+			bottom: 12%;
+			right: 5%;
+			animation: spin-right 40s linear infinite;
+		}
+
+		.star-six {
+			font-size: 4.7rem;
+			bottom: 12%;
+			left: 5%;
+			animation: spin-left 30s linear infinite;
+		}
+
+		.star-seven {
+			font-size: 5rem;
+			top: 25%;
+			left: 8%;
+			animation: spin-right 40s linear infinite;
+		}
+
+		.star-eight {
+			font-size: 5.5rem;
+			top: 25%;
+			left: 55%;
+			animation: spin-left 50s linear infinite;
+		}
+
+		.moon {
+			font-size: 20rem;
+			top: 5%;
+			right: 5%;
+			animation: pulse 20s infinite linear;
+		}
+	}
+}
+
+@keyframes spin-right {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin-left {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.1);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+
+	75% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: $dark;
+}
+
+.btn {
+	position: relative;
+	cursor: pointer;
+	font-family: 'Oswald', sans-serif;
+	font-size: 5rem;
+	padding: 2rem 4rem;
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px $skinny;
+	background-color: $skinny;
+	border: 1px solid transparent;
+	transition: transform 0.3s;
+	overflow: hidden;
+	z-index: 101;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 150%;
+		top: -30px;
+		left: -270px;
+		transform: rotate(15deg);
+		background-image: linear-gradient(
+			-250deg,
+			rgba(233, 166, 166, 1),
+			rgb(255, 255, 255)
+		);
+		transition: left 0.3s;
+	}
+
+	&:hover::before {
+		left: 270px;
+	}
+}
+
+
+
+.sky-animation {
+	transform: translateY(0);
+	
+}
+
